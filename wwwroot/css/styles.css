@@ -1,0 +1,603 @@
+/* Custom Styles for QuickBooks Custom Fields Manager */
+
+:root {
+    --qb-primary: #0077c5;
+    --qb-secondary: #2ca01c;
+    --qb-success: #28a745;
+    --qb-danger: #dc3545;
+    --qb-warning: #ffc107;
+    --qb-info: #17a2b8;
+    --qb-light: #f8f9fa;
+    --qb-dark: #343a40;
+    --qb-border: #dee2e6;
+    --qb-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    --qb-shadow-lg: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+/* Global Styles */
+body {
+    background-color: #f5f7fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navigation */
+.navbar-brand {
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+.navbar-dark .navbar-brand {
+    color: #ffffff !important;
+}
+
+/* Cards */
+.card {
+    border: 1px solid var(--qb-border);
+    border-radius: 0.5rem;
+    box-shadow: var(--qb-shadow);
+    transition: box-shadow 0.15s ease-in-out;
+}
+
+.card:hover {
+    box-shadow: var(--qb-shadow-lg);
+}
+
+.card-header {
+    background-color: var(--qb-light);
+    border-bottom: 1px solid var(--qb-border);
+    font-weight: 600;
+}
+
+/* Status Badges */
+.badge {
+    font-size: 0.75rem;
+    padding: 0.375rem 0.75rem;
+}
+
+#connectionStatus {
+    font-size: 0.8rem;
+    padding: 0.25rem 0.5rem;
+}
+
+/* Authentication Section */
+#authSection .display-1 {
+    font-size: 4rem;
+    opacity: 0.6;
+}
+
+/* Buttons */
+.btn {
+    border-radius: 0.375rem;
+    font-weight: 500;
+    transition: all 0.15s ease-in-out;
+}
+
+.btn-primary {
+    background-color: var(--qb-primary);
+    border-color: var(--qb-primary);
+}
+
+.btn-primary:hover {
+    background-color: #005a9e;
+    border-color: #005a9e;
+    transform: translateY(-1px);
+}
+
+.btn-lg {
+    padding: 0.75rem 1.5rem;
+    font-size: 1.125rem;
+}
+
+/* Form Controls */
+.form-control, .form-select {
+    border-radius: 0.375rem;
+    border: 1px solid var(--qb-border);
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--qb-primary);
+    box-shadow: 0 0 0 0.2rem rgba(0, 119, 197, 0.25);
+}
+
+/* Custom Field Table */
+.table {
+    margin-bottom: 0;
+}
+
+.table th {
+    background-color: var(--qb-light);
+    border-bottom: 2px solid var(--qb-border);
+    font-weight: 600;
+    color: var(--qb-dark);
+}
+
+.table td {
+    vertical-align: middle;
+    padding: 0.75rem;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(0, 119, 197, 0.05);
+}
+
+/* Field Status Indicators */
+.field-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.field-status.active {
+    color: var(--qb-success);
+}
+
+.field-status.inactive {
+    color: var(--qb-danger);
+}
+
+/* Association Tags */
+.association-tag {
+    display: inline-block;
+    background-color: #e9ecef;
+    color: #495057;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+    margin: 0.125rem;
+    border: 1px solid #ced4da;
+}
+
+.association-tag.transaction {
+    background-color: #cce5ff;
+    color: #004085;
+    border-color: #99d6ff;
+}
+
+.association-tag.contact {
+    background-color: #d4edda;
+    color: #155724;
+    border-color: #a3d9a4;
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    gap: 0.25rem;
+}
+
+.btn-sm {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+}
+
+/* Modal Enhancements */
+.modal-content {
+    border-radius: 0.5rem;
+    border: none;
+    box-shadow: var(--qb-shadow-lg);
+}
+
+.modal-header {
+    background-color: var(--qb-light);
+    border-bottom: 1px solid var(--qb-border);
+}
+
+.modal-title {
+    font-weight: 600;
+    color: var(--qb-dark);
+}
+
+/* Form Sections */
+.form-section {
+    background-color: #ffffff;
+    border: 1px solid var(--qb-border);
+    border-radius: 0.375rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.form-section-title {
+    font-weight: 600;
+    color: var(--qb-dark);
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Checkbox and Radio Enhancements */
+.form-check-input:checked {
+    background-color: var(--qb-primary);
+    border-color: var(--qb-primary);
+}
+
+.form-check-input:focus {
+    border-color: var(--qb-primary);
+    box-shadow: 0 0 0 0.2rem rgba(0, 119, 197, 0.25);
+}
+
+/* Loading States */
+.loading-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.spinner-border-sm {
+    width: 1rem;
+    height: 1rem;
+}
+
+/* Toast Notifications */
+.toast {
+    border-radius: 0.5rem;
+    box-shadow: var(--qb-shadow-lg);
+}
+
+.toast-header {
+    background-color: var(--qb-light);
+    border-bottom: 1px solid var(--qb-border);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .container-fluid {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    .card-body {
+        padding: 1rem;
+    }
+    
+    .btn-lg {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+    }
+    
+    .modal-dialog {
+        margin: 0.5rem;
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+        gap: 0.125rem;
+    }
+    
+    .table-responsive {
+        font-size: 0.875rem;
+    }
+}
+
+/* Animation Classes */
+.fade-in {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.slide-in {
+    animation: slideIn 0.3s ease-in-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Success/Error States */
+.success-state {
+    color: var(--qb-success);
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.error-state {
+    color: var(--qb-danger);
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+/* Field Type Icons */
+.field-type-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-right: 0.5rem;
+}
+
+.field-type-icon.string {
+    background-color: #e3f2fd;
+    color: #1976d2;
+}
+
+.field-type-icon.number {
+    background-color: #fff3e0;
+    color: #f57c00;
+}
+
+.field-type-icon.date {
+    background-color: #f3e5f5;
+    color: #7b1fa2;
+}
+
+.field-type-icon.boolean {
+    background-color: #e8f5e8;
+    color: #388e3c;
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: #6c757d;
+}
+
+.empty-state i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    opacity: 0.5;
+}
+
+/* Utility Classes */
+.text-monospace {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.border-start-primary {
+    border-left: 3px solid var(--qb-primary) !important;
+}
+
+.bg-light-primary {
+    background-color: rgba(0, 119, 197, 0.1) !important;
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --qb-light: #2d3748;
+        --qb-dark: #e2e8f0;
+        --qb-border: #4a5568;
+        --qb-bg: #1a202c;
+        --qb-card-bg: #2d3748;
+        --qb-text: #e2e8f0;
+        --qb-text-muted: #a0aec0;
+    }
+    
+    body {
+        background-color: var(--qb-bg);
+        color: var(--qb-text);
+    }
+    
+    /* Cards */
+    .card {
+        background-color: var(--qb-card-bg);
+        border-color: var(--qb-border);
+    }
+    
+    .card-header {
+        background-color: #374151 !important;
+        border-color: var(--qb-border);
+        color: var(--qb-text);
+    }
+    
+    .card-body {
+        background-color: var(--qb-card-bg);
+    }
+    
+    /* Forms */
+    .form-control, .form-select {
+        background-color: #374151;
+        border-color: var(--qb-border);
+        color: var(--qb-text);
+    }
+    
+    .form-control:focus, .form-select:focus {
+        background-color: #374151;
+        color: var(--qb-text);
+    }
+    
+    .form-control::placeholder {
+        color: var(--qb-text-muted);
+    }
+    
+    .form-text {
+        color: var(--qb-text-muted) !important;
+    }
+    
+    .form-label {
+        color: var(--qb-text);
+    }
+    
+    .form-check-label {
+        color: var(--qb-text);
+    }
+    
+    /* Tables */
+    .table {
+        color: var(--qb-text);
+    }
+    
+    .table th {
+        background-color: #374151;
+        color: var(--qb-text);
+        border-color: var(--qb-border);
+    }
+    
+    .table td {
+        border-color: var(--qb-border);
+    }
+    
+    .table-hover tbody tr:hover {
+        background-color: rgba(255, 255, 255, 0.05);
+    }
+    
+    /* Modals */
+    .modal-content {
+        background-color: var(--qb-card-bg);
+        color: var(--qb-text);
+    }
+    
+    .modal-header {
+        background-color: #374151;
+        border-color: var(--qb-border);
+    }
+    
+    .modal-footer {
+        background-color: var(--qb-card-bg);
+        border-color: var(--qb-border);
+    }
+    
+    .modal-title {
+        color: var(--qb-text);
+    }
+    
+    .btn-close {
+        filter: invert(1) grayscale(100%) brightness(200%);
+    }
+    
+    /* Alerts */
+    .alert-info {
+        background-color: rgba(23, 162, 184, 0.2);
+        border-color: rgba(23, 162, 184, 0.3);
+        color: #7dd3fc;
+    }
+    
+    .alert-success {
+        background-color: rgba(40, 167, 69, 0.2);
+        border-color: rgba(40, 167, 69, 0.3);
+        color: #86efac;
+    }
+    
+    .alert-danger {
+        background-color: rgba(220, 53, 69, 0.2);
+        border-color: rgba(220, 53, 69, 0.3);
+        color: #fca5a5;
+    }
+    
+    /* Badges and Tags */
+    .association-tag {
+        background-color: #374151;
+        color: var(--qb-text);
+        border-color: var(--qb-border);
+    }
+    
+    .association-tag.transaction {
+        background-color: rgba(0, 119, 197, 0.3);
+        color: #93c5fd;
+        border-color: rgba(0, 119, 197, 0.5);
+    }
+    
+    .association-tag.contact {
+        background-color: rgba(34, 197, 94, 0.3);
+        color: #86efac;
+        border-color: rgba(34, 197, 94, 0.5);
+    }
+    
+    /* Buttons */
+    .btn-outline-secondary {
+        color: var(--qb-text-muted);
+        border-color: var(--qb-border);
+    }
+    
+    .btn-outline-secondary:hover {
+        background-color: #374151;
+        color: var(--qb-text);
+    }
+    
+    .btn-secondary {
+        background-color: #4a5568;
+        border-color: #4a5568;
+    }
+    
+    /* Input groups */
+    .input-group-text {
+        background-color: #374151;
+        border-color: var(--qb-border);
+        color: var(--qb-text-muted);
+    }
+    
+    /* Dropdown menus */
+    .dropdown-menu {
+        background-color: var(--qb-card-bg);
+        border-color: var(--qb-border);
+    }
+    
+    .dropdown-item {
+        color: var(--qb-text);
+    }
+    
+    .dropdown-item:hover {
+        background-color: #374151;
+    }
+    
+    /* Toast */
+    .toast {
+        background-color: var(--qb-card-bg);
+        color: var(--qb-text);
+    }
+    
+    .toast-header {
+        background-color: #374151;
+        color: var(--qb-text);
+        border-color: var(--qb-border);
+    }
+    
+    /* Text utilities */
+    .text-muted {
+        color: var(--qb-text-muted) !important;
+    }
+    
+    .bg-light {
+        background-color: #374151 !important;
+    }
+    
+    /* Empty state */
+    .empty-state {
+        color: var(--qb-text-muted);
+    }
+    
+    /* Links */
+    .btn-link {
+        color: #60a5fa;
+    }
+    
+    /* Code elements */
+    code {
+        background-color: #374151;
+        color: #f472b6;
+    }
+    
+    /* Collapse chevron */
+    .btn-link.text-decoration-none {
+        color: var(--qb-text);
+    }
+}

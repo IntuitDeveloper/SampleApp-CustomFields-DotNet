@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickBooks-CustomFields-API", "QuickBooks-CustomFields-API.csproj", "{7ED2472A-6505-2B1E-623C-D517EE83F89E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7ED2472A-6505-2B1E-623C-D517EE83F89E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7ED2472A-6505-2B1E-623C-D517EE83F89E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7ED2472A-6505-2B1E-623C-D517EE83F89E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7ED2472A-6505-2B1E-623C-D517EE83F89E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3A42A98A-C773-4E4D-8916-F2CA0FC0AF82}
+	EndGlobalSection
+EndGlobal
